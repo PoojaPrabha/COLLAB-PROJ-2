@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html><span style="color:red" ng-if="error.code==1">{{error.message}}</span>
+<!--  {1,"Unable to register user details "} -->
+<form >
+<pre>
+Enter email id:   <input type="text" ng-model="user.email">
+<span style="color:red" ng-if="error.code==2">{{error.message}}</span>
+<!-- {2,"Email Id already exists.. please enter different email address} -->
+Enter password:   <input type="password" ng-model="user.password">
+Enter firstname:  <input type="text" ng-model="user.firstname">
+Enter lastname:   <input type="text" ng-model="user.lastname">
+Enter phonenumber:<input type="text" ng-model="user.phonenumber">
+Select Role:
+<input type="radio" ng-model="user.role" value="STUDENT"> STUDENT
+<input type="radio" ng-model="user.role" value="ALUMNI"> ALUMINI
+<input type="radio" ng-model="user.role" value="EMPLOYEE"> EMPLOYEE
+<input type="submit" ng-click="register()">
+</pre>
